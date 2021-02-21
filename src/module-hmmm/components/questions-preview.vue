@@ -19,7 +19,7 @@
 </template>
 
 <script>
-import { previewDetail } from '@/api/randomsapi/randomsapi'
+import { detail as previewDetail } from '@/api/hmmm/questions'
 export default {
   name: 'preview',
   data () {
