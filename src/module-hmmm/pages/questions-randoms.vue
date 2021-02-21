@@ -105,7 +105,7 @@
 </template>
 
 <script>
-import { randomsList, delRandom } from '@/api/randomsapi/randomsapi.js'
+import { randoms as randomsList, removeRandoms as delRandom } from '@/api/hmmm/questions.js'
 import Rpreview from './../components/questions-preview'
 export default {
   name: 'randoms',
