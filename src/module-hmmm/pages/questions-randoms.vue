@@ -125,7 +125,6 @@ export default {
   },
   methods: {
     handleSizeChange (val) { // 分页器
-      // console.log(val)
       this.pagesize = val
       this.page = 1
       this.getrandomsList()
@@ -135,7 +134,6 @@ export default {
       this.getrandomsList()// 获取组题列表
     },
     removeBtn () { // 清除
-      // console.log(1)
       this.form.keyword = ''
     },
     searchBtn () { // 搜索
@@ -145,7 +143,6 @@ export default {
       this.form.keyword = ''
     },
     delfandomBtn (obj) { // 删除
-      // console.log(obj)
       this.$confirm('此操作将永久删除, 是否继续?', '提示', {
         confirmButtonText: '确定',
         cancelButtonText: '取消',
@@ -165,13 +162,11 @@ export default {
       })
     },
     previewBtn (obj) { // 预览
-      // console.log(obj)
       this.questionsObj = obj
-      // console.log(this.questionsID)
+
       this.dialogVisible = true
     },
     prevBtn (val) { // 自定义事件
-      // console.log(val)
       this.dialogVisible = val
     },
     async getrandomsList () { // 获取组题列表
@@ -180,7 +175,6 @@ export default {
         pagesize: this.pagesize,
         ...this.form
       })
-      // console.log(resrandomsparams)
       this.tableData = resrandomsparams.data.items// 表格数据
       this.total = resrandomsparams.data.counts// 数据总数
       this.alertText = `总条数为${this.total}条`
