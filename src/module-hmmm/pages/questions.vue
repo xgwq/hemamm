@@ -224,6 +224,7 @@
     </el-pagination>
     </el-card>
     <!-- 使用预览的组件 -->
+    <!-- @dialogVisible="prevBtn" 自定义事件 -->
     <questions-preview :questionsObj="questionsObj" :dialogB="dialogVisible" @dialogVisible="prevBtn"></questions-preview>
   </div>
 
@@ -302,11 +303,14 @@ export default {
     },
     // 预览功能事件
     previewFn (questionInfo) {
+    //   console.log(questionInfo)  得到的是当前点击的那个对象
       // 点击按钮,显示提示预览的框---页面在components/questions-preview.vue
       this.questionsObj = questionInfo
+      //   显示预览组件
       this.dialogVisible = true
     },
     prevBtn (val) { // 自定义事件
+    //   console.log(val)// 得到true/false
       this.dialogVisible = val
     },
     // 修改功能
